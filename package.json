@@ -1,0 +1,23 @@
+{
+  "name": "claudia-uppercase-kata",
+  "version": "1.0.0",
+  "description": "Inspiration taken from [this article on claudiajs.com](https://claudiajs.com/tutorials/designing-testable-lambdas.html).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xpeppers/claudia-uppercase-kata.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xpeppers/claudia-uppercase-kata/issues"
+  },
+  "homepage": "https://github.com/xpeppers/claudia-uppercase-kata#readme",
+  "dependencies": {
+    "aws-sdk": "^2.6.6",
+    "claudia": "^2.0.2"
+  }
+}
