@@ -4,7 +4,10 @@
   "description": "Inspiration taken from [this article on claudiajs.com](https://claudiajs.com/tutorials/designing-testable-lambdas.html).",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "create": "claudia create --region eu-central-1 --handler index.handler",
+    "deploy": "claudia update",
+    "destroy": "claudia destroy && rm claudia.json"
   },
   "repository": {
     "type": "git",
