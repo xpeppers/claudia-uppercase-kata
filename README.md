@@ -17,19 +17,19 @@ npm install
 ## Create the Lambda
 
 ```
-npm run create [--profile your-aws-profile]
+npm run create [-- --profile your-aws-profile]
 ```
 
 ## Deploy the Lambda
 
 ```
-npm run deploy [--profile your-aws-profile]
+npm run deploy [-- --profile your-aws-profile]
 ```
 
 ## Destroy the Lambda
 
 ```
-npm run destroy [--profile your-aws-profile]
+npm run destroy [-- --profile your-aws-profile]
 ```
 
 
