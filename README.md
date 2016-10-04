@@ -31,3 +31,10 @@ npm run deploy [--profile your-aws-profile]
 ```
 npm run destroy [--profile your-aws-profile]
 ```
+
+
+## Executing test
+
+1. create a bucket named `claudia-uppercase-test`
+2. add `inputfile.txt` to bucket
+3. `npm test` (optionally set AWS_PROFILE=[your_profile])
