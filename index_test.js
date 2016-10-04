@@ -1,3 +1,4 @@
+var aws = require('aws-sdk');
 var assert = require('assert')
 
 var event = {
@@ -28,8 +29,22 @@ describe('Uppercase Bucket Stream', function(){
         assert.equal(data.Key, "outputfile.txt")
         assert.equal(data.Location, 'https://claudia-uppercase-test.s3.amazonaws.com/outputfile.txt')
 
-        done()
+        readS3Object(data.Bucket, data.Key, function(err, data) {
+          assert.equal(err, null)
+          assert.equal(data.Body.toString(), "LOREM IPSUM DOLOR SIT AMET.\n")
+          done()
+        })
       }
     })
   })
 })
+
+
+function readS3Object(bucket, key, callback) {
+  var s3 = new aws.S3()
+
+  var stream = s3.getObject({
+    Bucket: bucket,
+    Key: key
+  }, callback)
+}
