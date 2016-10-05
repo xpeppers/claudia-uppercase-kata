@@ -1,13 +1,15 @@
 var aws = require('aws-sdk');
 var assert = require('assert')
 
+var bucketName = "claudia-uppercase-test"
+
 var event = {
   "Records": [
     {
       "eventSource": "aws:s3",
       "s3": {
         "bucket": {
-          "name": "claudia-uppercase-test"
+          "name": bucketName
         },
         "object": {
           "key": "inputfile.txt"
@@ -41,7 +43,7 @@ describe('Uppercase Bucket Stream', function(){
 
 
 function readS3Object(bucket, key, callback) {
-  var s3 = new aws.S3()
+  var s3 = new aws.S3({ signatureVersion: 'v4' })
 
   var stream = s3.getObject({
     Bucket: bucket,

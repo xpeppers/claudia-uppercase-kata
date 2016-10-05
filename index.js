@@ -2,7 +2,7 @@ var aws = require('aws-sdk');
 
 exports.handler = function (event, context) {
   var convert = function(bucket, fileKey) {
-    var s3 = new aws.S3(),
+    var s3 = new aws.S3({ signatureVersion: 'v4' }),
         Transform = require('stream').Transform,
         uppercase = new Transform({decodeStrings: false}),
         stream;
