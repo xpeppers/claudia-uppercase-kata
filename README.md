@@ -36,6 +36,6 @@ npm run destroy [-- --profile your-aws-profile]
 ## Executing test
 
 1. create a S3 bucket
-1. change the bucket name in index_test.js
-2. add `inputfile.txt` to bucket
-3. `npm test` (optionally set AWS_PROFILE=[your_profile])
+2. change the bucket name in index_test.js
+3. add `inputfile.txt` to bucket
+4. `npm test` (optionally set AWS_PROFILE=[your_profile])
