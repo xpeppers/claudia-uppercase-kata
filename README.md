@@ -43,7 +43,8 @@ npm run destroy [-- --profile your-aws-profile]
 
 ## Executing test
 
-1. create a S3 bucket
-2. change the bucket name in index_test.js
-3. add `inputfile.txt` to bucket
-4. `npm test` (optionally set AWS_PROFILE=[your_profile])
+1. Create a S3 bucket
+2. Change the bucket name in index_test.js:4
+3. Deploy the lambda
+4. Create the S3 Event Source with your bucket name
+5. `npm test` (optionally set AWS_PROFILE=[your_profile])
