@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha index_test.js",
-    "create": "claudia create --region eu-central-1 --handler index.handler",
+    "create": "claudia create --region us-east-1 --handler index.handler",
+    "add-s3-event-source": "claudia add-s3-event-source --region us-east-1",
     "deploy": "claudia update",
     "destroy": "claudia destroy && rm claudia.json"
   },

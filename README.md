@@ -20,6 +20,14 @@ npm install
 npm run create [-- --profile your-aws-profile]
 ```
 
+## Create the S3 Event Source
+
+Edit the bucket according to your configuration.
+
+```
+npm run add-s3-event-source -- --bucket YOUR_BUCKET_NAME --prefix inputfile [--profile your-aws-profile]
+```
+
 ## Deploy the Lambda
 
 ```
