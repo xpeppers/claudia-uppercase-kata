@@ -66,7 +66,10 @@ function waitUntilS3ObjectExists(bucket, key) {
     var intervalId = setInterval(() => {
       console.log('-- waiting until s3 object exists', bucket, key)
       readS3Object(bucket, key)
-      .then(resolve)
+      .then((data) => {
+        resolve(data)
+        clearInterval(intervalId)
+      })
       .catch(() => {
         console.log('-- retries', retries)
         if(retries > 10) {
